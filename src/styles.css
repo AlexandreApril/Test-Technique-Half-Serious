@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #000000;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    margin: 0 auto;
+}
+
+table td {
+    height: 30px;
+    min-width: 200px;
+    padding: 5px;
+    text-align: justify;
+}
+
+table thead, tr td {
+    border-bottom: 1px solid #000000;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F1F1F1;
+}
+
+table thead, table tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+table .ship-row:hover, .pilot-name:hover {
+    background-color: #C2C2C2;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    margin: 20px;
+}
+
+.header {
+    font-weight: 600;
+}
+
+.back-button {
+    height: 100%;
+    margin: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+.star-wars-logo {
+    max-width: 500px;
+}

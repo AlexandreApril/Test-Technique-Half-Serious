@@ -1,0 +1,22 @@
+<h1>Ships</h1>
+
+<table>
+    <thead>
+        <td class="col-3">Name</td>
+        <td class="col-2">Model</td>
+        <td class="col-2">Starship class</td>
+        <td class="col-2">Cost in credits</td>
+        <td class="col-1">Length</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ship of ships"
+            class="ship-row"
+            (click)="getShipDetails(ship)">
+            <td class="col-3">{{ship.name}}</td>
+            <td class="col-2">{{ship.model}}</td>
+            <td class="col-2">{{ship.starship_class}}</td>
+            <td class="col-2">{{ship.cost_in_credits}}</td>
+            <td class="col-1">{{ship.length}}</td>
+        </tr>
+    </tbody>
+</table>

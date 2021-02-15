@@ -1,0 +1,65 @@
+<div class="row">
+    <h1>Pilot Details</h1>
+
+    <button class="back-button"
+            (click)="back()">
+        Back
+    </button>
+</div>
+
+<table>
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>{{pilot.name}}</td>
+        </tr>
+        <tr>
+            <td>Height</td>
+            <td>{{pilot.height}}</td>
+        </tr>
+        <tr>
+            <td>Mass</td>
+            <td>{{pilot.mass}}</td>
+        </tr>
+        <tr>
+            <td>Hair color</td>
+            <td>{{pilot.hair_color}}</td>
+        </tr>
+        <tr>
+            <td>Skin color</td>
+            <td>{{pilot.skin_color}}</td>
+        </tr>
+        <tr>
+            <td>Eye color</td>
+            <td>{{pilot.eye_color}}</td>
+        </tr>
+        <tr>
+            <td>Birth year</td>
+            <td>{{pilot.birth_year}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{pilot.gender}}</td>
+        </tr>
+        <tr>
+            <td>Species</td>
+            <td>{{pilot.species[0]}}</td>
+        </tr>
+        <tr>
+            <td>Starships</td>
+            <td>
+                <p *ngFor="let starship of pilot.starships">
+                    {{getStarshipNames(starship)}}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Vehicles</td>
+            <td>
+                <p *ngFor="let vehicle of pilot.vehicles">
+                    {{getVehicleNames(vehicle)}}
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>

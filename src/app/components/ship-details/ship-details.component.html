@@ -1,0 +1,75 @@
+<div class="row">
+    <h1>Ship Details</h1>
+
+    <button class="back-button"
+            (click)="back()">
+        Back
+    </button>
+</div>
+
+<table>
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>{{ship.name}}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>{{ship.model}}</td>
+        </tr>
+        <tr>
+            <td>Manufacturer</td>
+            <td>{{ship.manufacturer}}</td>
+        </tr>
+        <tr>
+            <td>Cost in credits</td>
+            <td>{{ship.cost_in_credits}}</td>
+        </tr>
+        <tr>
+            <td>Length</td>
+            <td>{{ship.length}}</td>
+        </tr>
+        <tr>
+            <td>Max atmosphering speed</td>
+            <td>{{ship.max_atmosphering_speed}}</td>
+        </tr>
+        <tr>
+            <td>Crew</td>
+            <td>{{ship.crew}}</td>
+        </tr>
+        <tr>
+            <td>Passengers</td>
+            <td>{{ship.passengers}}</td>
+        </tr>
+        <tr>
+            <td>Cargo capacity</td>
+            <td>{{ship.cargo_capacity}}</td>
+        </tr>
+        <tr>
+            <td>Consumables</td>
+            <td>{{ship.consumables}}</td>
+        </tr>
+        <tr>
+            <td>Hyperdrive rating</td>
+            <td>{{ship.hyperdrive_rating}}</td>
+        </tr>
+        <tr>
+            <td>MGLT</td>
+            <td>{{ship.MGLT}}</td>
+        </tr>
+        <tr>
+            <td>Starship class</td>
+            <td>{{ship.starship_class}}</td>
+        </tr>
+        <tr>
+            <td>Pilot(s)</td>
+            <td>
+                <p *ngFor="let pilot of ship.pilots"
+                   class="pilot-name"
+                   (click)="getPilotDetails(pilot)">
+                    {{getPilotName(pilot)}}
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
